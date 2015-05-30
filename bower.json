@@ -1,0 +1,20 @@
+{
+  "name": "aurelia-materialize",
+  "version": "0.1.0",
+  "description": "Aurelia integration with Materialize CSS Framework.",
+  "keywords": [
+    "aurelia",
+    "materialize",
+    "css",
+    "plugin"
+  ],
+  "homepage": "http://aurelia.io",
+  "license": "MIT",
+  "authors": [
+    "Manuel Guilbault <manuel.guilbault@gmail.com> (https://github.com/manuel-guilbault/)"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/manuel-guilbault/aurelia-materialize"
+  }
+}

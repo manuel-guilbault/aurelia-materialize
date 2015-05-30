@@ -1,94 +1,113 @@
-# aurelia-skeleton-navigation
+# aurelia-materialize
 
-[![ZenHub](https://raw.githubusercontent.com/ZenHubIO/support/master/zenhub-badge.png)](https://zenhub.io)
-[![Join the chat at https://gitter.im/aurelia/discuss](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/aurelia/discuss?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+A plugin for [Aurelia](http://aurelia.io) that integrate JS features from [Materialize CSS](http://materializecss.com/).
 
-This skeleton is part of the [Aurelia](http://www.aurelia.io/) platform. It sets up a standard navigation-style app using gulp to build your ES6 code with the Babel compiler. Karma/Protractor/Jasmine testing is also configured.
+> To keep up to date on [Aurelia](http://www.aurelia.io/), please visit and subscribe to [the official blog](http://blog.durandal.io/). If you have questions, we invite you to join us on [our Gitter Channel](https://gitter.im/aurelia/discuss).
 
-> To keep up to date on [Aurelia](http://www.aurelia.io/), please visit and subscribe to [the official blog](http://blog.durandal.io/). If you have questions, we invite you to [join us on Gitter](https://gitter.im/aurelia/discuss). If you would like to have deeper insight into our development process, please install the [ZenHub](https://zenhub.io) Chrome Extension and visit any of our repository's boards. You can get an overview of all Aurelia work by visiting [the framework board](https://github.com/aurelia/framework#boards).
+##Documentation
 
-## Running The App
+###Select
 
-To run the app, follow these steps.
+Put the ```materialize-select``` attribute on a ```select``` element to
+style the select as a materialize select:
+
+``` html
+<select value.bind="selectedValue" materialize-select>
+  <option repeat.for="value of values" value.bind="value">${value}</option>
+</select>
+```
+
+###Side Nav
+
+Put the ```materialize-side-nav``` attribute on an anchor acting as a button collapse
+to activate the side nav widget:
+
+``` html
+  <ul id="slide-out" class="side-nav">
+    <li><a href="#!">First Sidebar Link</a></li>
+    <li><a href="#!">Second Sidebar Link</a></li>
+  </ul>
+  <a href="#" data-activates="slide-out" class="button-collapse" materialize-side-nav>
+    <i class="mdi-navigation-menu"></i>
+  </a>
+```
+
+You can specify options for the side nav (check the [documentation](http://materializecss.com/side-nav.html)):
+
+``` html
+  <a href="#" data-activates="slide-out" class="button-collapse" materialize-side-nav="menu-width: 400; edge: 'right';">
+    <i class="mdi-navigation-menu"></i>
+  </a>
+```
+
+Since we are in a SPA context, the ```closeOnClick``` option is ```true``` by default, but can be changed as the other options:
+
+``` html
+  <a href="#" data-activates="slide-out" class="button-collapse" materialize-side-nav="menu-width: 400; edge: 'right'; close-on-click: false;">
+    <i class="mdi-navigation-menu"></i>
+  </a>
+```
+
+## Dependencies
+
+* [aurelia-dependency-injection](https://github.com/aurelia/dependency-injection)
+* [aurelia-binding](https://github.com/aurelia/binding)
+* [aurelia-templating](https://github.com/aurelia/templating)
+
+## Used By
+
+This library isn't used by Aurelia. It is an optional plugin.
+
+## Platform Support
+
+This library can be used in the **browser**.
+
+## Building The Code
+
+To build the code, follow these steps.
 
 1. Ensure that [NodeJS](http://nodejs.org/) is installed. This provides the platform on which the build tooling runs.
 2. From the project folder, execute the following command:
 
-  ```shell
-  npm install
-  ```
+	```shell
+	npm install
+	```
 3. Ensure that [Gulp](http://gulpjs.com/) is installed. If you need to install it, use the following command:
 
-  ```shell
-  npm install -g gulp
-  ```
-4. Ensure that [jspm](http://jspm.io/) is installed. If you need to install it, use the following command:
+	```shell
+	npm install -g gulp
+	```
+4. To build the code, you can now run:
 
-  ```shell
-  npm install -g jspm
-  ```
-  > **Note:** jspm queries GitHub to install semver packages, but GitHub has a rate limit on anonymous API requests. It is advised that you configure jspm with your GitHub credentials in order to avoid problems. You can do this by executing `jspm registry config github` and following the prompts.
-5. Install the client-side dependencies with jspm:
+	```shell
+	gulp build
+	```
+5. You will find the compiled code in the `dist` folder, available in three module formats: AMD, CommonJS and ES6.
 
-  ```shell
-  jspm install -y
-  ```
-  >**Note:** Windows users, if you experience an error of "unknown command unzip" you can solve this problem by doing `npm install -g unzip` and then re-running `jspm install`.
-6. To run the app, execute the following command:
+6. See `gulpfile.js` for other tasks related to generating the docs and linting.
 
-  ```shell
-  gulp watch
-  ```
-7. Browse to [http://localhost:9000](http://localhost:9000) to see the app. You can make changes in the code found under `src` and the browser should auto-refresh itself as you save files.
-
-> Note: At present there is a bug in the HTMLImports polyfill which only occurs on IE. We have submitted a pull request to the team with the fix. In the mean time, if you want to test on IE, you can work around the issue by explicitly adding a script tag before you load system.js. The script tag should look something like this (be sure to confirm the version number):
-
-```html
-<script src="jspm_packages/github/webcomponents/webcomponentsjs@0.5.2/HTMLImports.js"></script>
-```
-
-## Running The Unit Tests
+## Running The Tests
 
 To run the unit tests, first ensure that you have followed the steps above in order to install all dependencies and successfully build the library. Once you have done that, proceed with these additional steps:
 
 1. Ensure that the [Karma](http://karma-runner.github.io/) CLI is installed. If you need to install it, use the following command:
 
-  ```shell
-  npm install -g karma-cli
-  ```
-2. Install Aurelia libs for test visibility:
+	```shell
+	npm install -g karma-cli
+	```
+2. Ensure that [jspm](http://jspm.io/) is installed. If you need to install it, use the following commnand:
 
-```shell
-jspm install aurelia-framework
-jspm install aurelia-http-client
-jspm install aurelia-router
-```
-3. You can now run the tests with this command:
+	```shell
+	npm install -g jspm
+	```
+3. Download the [SystemJS](https://github.com/systemjs/systemjs) module loader:
 
-  ```shell
-  karma start
-  ```
+	```shell
+	jspm dl-loader
+	```
 
-## Running The E2E Tests
-Integration tests are performed with [Protractor](http://angular.github.io/protractor/#/).
+4. You can now run the tests with this command:
 
-1. Place your E2E-Tests into the folder ```test/e2e/src```
-2. Install the necessary webdriver
-
-  ```shell
-  gulp webdriver_update
-  ```
-
-3. Configure the path to the webdriver by opening the file ```protractor.conf.js``` and adjusting the ```seleniumServerJar``` property. Typically its only needed to adjust the version number.
-
-4. Make sure your app runs and is accessible
-
-  ```shell
-  gulp watch
-  ```
-
-5. In another console run the E2E-Tests
-
-  ```shell
-  gulp e2e
-  ```
+	```shell
+	karma start
+	```
