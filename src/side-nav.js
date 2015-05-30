@@ -5,7 +5,7 @@
 @bindable('menuWidth')
 @bindable('edge')
 @bindable({ name: 'closeOnClick', defaultValue: true })
-export class SideNav {
+export class MaterializeSideNav {
   constructor(element) {
     this.element = element;
   }
