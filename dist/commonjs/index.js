@@ -11,6 +11,10 @@ var _sideNav = require('./side-nav');
 
 exports.MaterializeSideNav = _sideNav.MaterializeSideNav;
 
+var _validationViewStrategy = require('./validation-view-strategy');
+
+exports.MaterializeValidationViewStrategy = _validationViewStrategy.MaterializeValidationViewStrategy;
+
 function configure(aurelia) {
   aurelia.globalizeResources('./select', './side-nav');
 }

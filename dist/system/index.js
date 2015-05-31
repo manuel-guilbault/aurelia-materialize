@@ -1,4 +1,4 @@
-System.register(['./select', './side-nav'], function (_export) {
+System.register(['./select', './side-nav', './validation-view-strategy'], function (_export) {
   'use strict';
 
   _export('configure', configure);
@@ -12,6 +12,8 @@ System.register(['./select', './side-nav'], function (_export) {
       _export('MaterializeSelect', _select.MaterializeSelect);
     }, function (_sideNav) {
       _export('MaterializeSideNav', _sideNav.MaterializeSideNav);
+    }, function (_validationViewStrategy) {
+      _export('MaterializeValidationViewStrategy', _validationViewStrategy.MaterializeValidationViewStrategy);
     }],
     execute: function () {}
   };
