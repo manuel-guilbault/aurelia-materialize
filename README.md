@@ -48,6 +48,24 @@ Since we are in a SPA context, the ```closeOnClick``` option is ```true``` by de
   </a>
 ```
 
+## Integration with aurelia-validation
+
+You can easily integrate aurelia-materialize with [aurelia-validation](https://github.com/aurelia/validation). In your application's ```configure``` method, first load aurelia-materialize, then load aurelia-validation and provide a configuration callback that will tell to the validation plugin to use aurelia-materialize's view strategy to provide visual feedback.
+
+``` javascript
+import {MaterializeValidationViewStrategy} from 'aurelia-materialize';
+
+export function configure(aurelia) {
+  aurelia.use
+    .standardConfiguration()
+    .developmentLogging()
+    .plugin('aurelia-materialize')
+    .plugin('aurelia-validation', config => { config.useViewStrategy(new MaterializeValidationViewStrategy()); });
+
+  aurelia.start().then(a => a.setRoot());
+}
+```
+
 ## Dependencies
 
 * [aurelia-dependency-injection](https://github.com/aurelia/dependency-injection)
