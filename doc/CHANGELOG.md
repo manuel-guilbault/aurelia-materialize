@@ -1,3 +1,11 @@
+### 0.2.2 (2015-06-03)
+
+
+#### Bug Fixes
+
+* **all:** add import of jquery before materialize ([27583f34](https://github.com/manuel-guilbault/aurelia-materialize/commit/27583f346b26867b2ba20746173cab27fc8e399c))
+
+
 ## 0.2.0 (2015-05-31)
 
 #### Features
