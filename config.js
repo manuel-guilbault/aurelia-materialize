@@ -4,6 +4,16 @@ System.config({
     "*": "*.js",
     "github:*": "jspm_packages/github/*.js",
     "npm:*": "jspm_packages/npm/*.js"
+  },
+  "shim": {
+    "packages": {
+      "materialize": {
+        "main": "materialize",
+        "format": "global",
+        "deps": "jquery",
+        "exports": "Materialize"
+      }
+    }
   }
 });
 
