@@ -1,6 +1,6 @@
 {
   "name": "aurelia-materialize",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Aurelia integration with Materialize CSS Framework.",
   "keywords": [
     "aurelia",
@@ -29,7 +29,13 @@
       "aurelia-binding": "github:aurelia/binding@^0.6.1",
       "aurelia-dependency-injection": "github:aurelia/dependency-injection@^0.7.1",
       "aurelia-templating": "github:aurelia/templating@^0.11.2",
-      "css": "github:systemjs/plugin-css@^0.1.9"
+      "css": "github:systemjs/plugin-css@^0.1.9",
+      "jquery": "npm:jquery@^2.1.4",
+      "materialize": "github:dogfalo/materialize@^0.96.1"
+    },
+    "devDependencies": {
+      "traceur": "github:jmcriffey/bower-traceur@0.0.88",
+      "traceur-runtime": "github:jmcriffey/bower-traceur-runtime@0.0.88"
     }
   },
   "devDependencies": {

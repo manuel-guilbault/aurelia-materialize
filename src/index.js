@@ -1,4 +1,7 @@
-﻿export {MaterializeSelect} from './select';
+﻿import 'materialize';
+import 'materialize/bin/materialize.css!';
+
+export {MaterializeSelect} from './select';
 export {MaterializeSideNav} from './side-nav';
 export {MaterializeValidationViewStrategy} from './validation-view-strategy';
 
