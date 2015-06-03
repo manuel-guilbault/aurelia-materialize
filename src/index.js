@@ -1,4 +1,5 @@
-﻿import 'materialize';
+﻿import $ from 'jquery';
+import 'materialize';
 import 'materialize/bin/materialize.css!';
 
 export {MaterializeSelect} from './select';
