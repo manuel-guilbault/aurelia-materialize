@@ -1,9 +1,13 @@
-define(['exports', 'aurelia-framework'], function (exports, _aureliaFramework) {
+define(['exports', 'aurelia-framework', 'jquery'], function (exports, _aureliaFramework, _jquery) {
   'use strict';
 
   exports.__esModule = true;
 
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
   function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+  var _$ = _interopRequireDefault(_jquery);
 
   var MaterializeSelect = (function () {
     function MaterializeSelect(element) {
@@ -15,11 +19,11 @@ define(['exports', 'aurelia-framework'], function (exports, _aureliaFramework) {
     var _MaterializeSelect = MaterializeSelect;
 
     _MaterializeSelect.prototype.attached = function attached() {
-      $(this.element).material_select();
+      (0, _$['default'])(this.element).material_select();
     };
 
     _MaterializeSelect.prototype.detached = function detached() {
-      $(this.element).material_select('destroy');
+      (0, _$['default'])(this.element).material_select('destroy');
     };
 
     MaterializeSelect = (0, _aureliaFramework.inject)(Element)(MaterializeSelect) || MaterializeSelect;

@@ -1,4 +1,5 @@
 import {customAttribute, inject, bindable} from 'aurelia-framework';
+import $ from 'jquery';
 
 @customAttribute('materialize-side-nav')
 @inject(Element)

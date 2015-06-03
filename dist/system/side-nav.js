@@ -1,7 +1,7 @@
-System.register(['aurelia-framework'], function (_export) {
+System.register(['aurelia-framework', 'jquery'], function (_export) {
   'use strict';
 
-  var customAttribute, inject, bindable, MaterializeSideNav;
+  var customAttribute, inject, bindable, $, MaterializeSideNav;
 
   function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
@@ -10,6 +10,8 @@ System.register(['aurelia-framework'], function (_export) {
       customAttribute = _aureliaFramework.customAttribute;
       inject = _aureliaFramework.inject;
       bindable = _aureliaFramework.bindable;
+    }, function (_jquery) {
+      $ = _jquery['default'];
     }],
     execute: function () {
       MaterializeSideNav = (function () {

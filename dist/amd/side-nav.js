@@ -1,9 +1,13 @@
-define(['exports', 'aurelia-framework'], function (exports, _aureliaFramework) {
+define(['exports', 'aurelia-framework', 'jquery'], function (exports, _aureliaFramework, _jquery) {
   'use strict';
 
   exports.__esModule = true;
 
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
   function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+  var _$ = _interopRequireDefault(_jquery);
 
   var MaterializeSideNav = (function () {
     function MaterializeSideNav(element) {
@@ -15,7 +19,7 @@ define(['exports', 'aurelia-framework'], function (exports, _aureliaFramework) {
     var _MaterializeSideNav = MaterializeSideNav;
 
     _MaterializeSideNav.prototype.attached = function attached() {
-      $(this.element).sideNav({
+      (0, _$['default'])(this.element).sideNav({
         menuWidth: this.menuWidth,
         edge: this.edge,
         closeOnClick: this.closeOnClick
