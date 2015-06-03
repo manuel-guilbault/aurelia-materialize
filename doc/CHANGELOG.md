@@ -1,3 +1,12 @@
+### 0.2.3 (2015-06-03)
+
+
+#### Bug Fixes
+
+* **all:**
+  * fix import of jquery in custom attributes ([98f1ae3c](https://github.com/manuel-guilbault/aurelia-materialize/commit/98f1ae3c338f0684c3e911f3f69059bd1052ba3e))
+
+
 ### 0.2.2 (2015-06-03)
 
 
