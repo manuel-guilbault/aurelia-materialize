@@ -1,3 +1,12 @@
+### 0.2.5 (2015-06-03)
+
+
+#### Bug Fixes
+
+* **all:**
+  * try to fix import of jquery and materialize ([f4f05e4b](https://github.com/manuel-guilbault/aurelia-materialize/commit/f4f05e4b61ed98cd3e4f5bbcd6e2e8daf9ad4753))
+
+
 ### 0.2.3 (2015-06-03)
 
 
