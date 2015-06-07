@@ -4,16 +4,6 @@ System.config({
     "*": "*.js",
     "github:*": "jspm_packages/github/*.js",
     "npm:*": "jspm_packages/npm/*.js"
-  },
-  "shim": {
-    "packages": {
-      "materialize": {
-        "main": "materialize",
-        "format": "global",
-        "deps": "jquery",
-        "exports": "Materialize"
-      }
-    }
   }
 });
 
@@ -23,7 +13,7 @@ System.config({
     "aurelia-dependency-injection": "github:aurelia/dependency-injection@0.7.1",
     "aurelia-templating": "github:aurelia/templating@0.11.2",
     "css": "github:systemjs/plugin-css@0.1.11",
-    "jquery": "npm:jquery@2.1.4",
+    "jquery": "github:components/jquery@2.1.4",
     "materialize": "github:dogfalo/materialize@0.96.1",
     "traceur": "github:jmcriffey/bower-traceur@0.0.88",
     "traceur-runtime": "github:jmcriffey/bower-traceur-runtime@0.0.88",
@@ -59,8 +49,7 @@ System.config({
       "core-js": "npm:core-js@0.9.7"
     },
     "github:dogfalo/materialize@0.96.1": {
-      "css": "github:systemjs/plugin-css@0.1.11",
-      "jquery": "github:components/jquery@2.1.4"
+      "css": "github:systemjs/plugin-css@0.1.11"
     },
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.3.0"
@@ -149,9 +138,6 @@ System.config({
     },
     "npm:inherits@2.0.1": {
       "util": "github:jspm/nodelibs-util@0.1.0"
-    },
-    "npm:jquery@2.1.4": {
-      "process": "github:jspm/nodelibs-process@0.1.1"
     },
     "npm:os-browserify@0.1.2": {
       "os": "github:jspm/nodelibs-os@0.1.0"

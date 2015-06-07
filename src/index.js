@@ -1,6 +1,5 @@
 ﻿import 'jquery';
-import 'materialize/bin/materialize';
-import 'materialize/bin/materialize.css!';
+import 'materialize';
 
 export {MaterializeSelect} from './select';
 export {MaterializeSideNav} from './side-nav';

@@ -30,7 +30,7 @@
       "aurelia-dependency-injection": "github:aurelia/dependency-injection@^0.7.1",
       "aurelia-templating": "github:aurelia/templating@^0.11.2",
       "css": "github:systemjs/plugin-css@^0.1.9",
-      "jquery": "npm:jquery@^2.1.4",
+      "jquery": "github:components/jquery@^2.1.4",
       "materialize": "github:dogfalo/materialize@^0.96.1"
     },
     "devDependencies": {
