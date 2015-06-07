@@ -1,4 +1,4 @@
-define(['exports', 'aurelia-framework', 'jquery'], function (exports, _aureliaFramework, _jquery) {
+define(['exports', 'aurelia-templating', 'aurelia-dependency-injection', 'jquery'], function (exports, _aureliaTemplating, _aureliaDependencyInjection, _jquery) {
   'use strict';
 
   exports.__esModule = true;
@@ -26,8 +26,8 @@ define(['exports', 'aurelia-framework', 'jquery'], function (exports, _aureliaFr
       (0, _$['default'])(this.element).material_select('destroy');
     };
 
-    MaterializeSelect = (0, _aureliaFramework.inject)(Element)(MaterializeSelect) || MaterializeSelect;
-    MaterializeSelect = (0, _aureliaFramework.customAttribute)('materialize-select')(MaterializeSelect) || MaterializeSelect;
+    MaterializeSelect = (0, _aureliaDependencyInjection.inject)(Element)(MaterializeSelect) || MaterializeSelect;
+    MaterializeSelect = (0, _aureliaTemplating.customAttribute)('materialize-select')(MaterializeSelect) || MaterializeSelect;
     return MaterializeSelect;
   })();
 

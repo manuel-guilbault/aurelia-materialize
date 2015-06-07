@@ -6,7 +6,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'd
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
-var _aureliaFramework = require('aurelia-framework');
+var _aureliaTemplating = require('aurelia-templating');
+
+var _aureliaDependencyInjection = require('aurelia-dependency-injection');
 
 var _jquery = require('jquery');
 
@@ -29,8 +31,8 @@ var MaterializeSelect = (function () {
     (0, _jquery2['default'])(this.element).material_select('destroy');
   };
 
-  MaterializeSelect = (0, _aureliaFramework.inject)(Element)(MaterializeSelect) || MaterializeSelect;
-  MaterializeSelect = (0, _aureliaFramework.customAttribute)('materialize-select')(MaterializeSelect) || MaterializeSelect;
+  MaterializeSelect = (0, _aureliaDependencyInjection.inject)(Element)(MaterializeSelect) || MaterializeSelect;
+  MaterializeSelect = (0, _aureliaTemplating.customAttribute)('materialize-select')(MaterializeSelect) || MaterializeSelect;
   return MaterializeSelect;
 })();
 

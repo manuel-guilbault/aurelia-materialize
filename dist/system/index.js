@@ -1,4 +1,4 @@
-System.register(['jquery', 'materialize/bin/materialize', 'materialize/bin/materialize.css!', './select', './side-nav', './validation-view-strategy'], function (_export) {
+System.register(['jquery', 'materialize', './select', './side-nav', './validation-view-strategy'], function (_export) {
   'use strict';
 
   _export('configure', configure);
@@ -8,7 +8,7 @@ System.register(['jquery', 'materialize/bin/materialize', 'materialize/bin/mater
   }
 
   return {
-    setters: [function (_jquery) {}, function (_materializeBinMaterialize) {}, function (_materializeBinMaterializeCss) {}, function (_select) {
+    setters: [function (_jquery) {}, function (_materialize) {}, function (_select) {
       _export('MaterializeSelect', _select.MaterializeSelect);
     }, function (_sideNav) {
       _export('MaterializeSideNav', _sideNav.MaterializeSideNav);

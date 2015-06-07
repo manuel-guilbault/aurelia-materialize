@@ -5,9 +5,7 @@ exports.configure = configure;
 
 require('jquery');
 
-require('materialize/bin/materialize');
-
-require('materialize/bin/materialize.css!');
+require('materialize');
 
 var _select = require('./select');
 

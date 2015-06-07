@@ -1,4 +1,4 @@
-define(['exports', 'jquery', 'materialize/bin/materialize', 'materialize/bin/materialize.css!', './select', './side-nav', './validation-view-strategy'], function (exports, _jquery, _materializeBinMaterialize, _materializeBinMaterializeCss, _select, _sideNav, _validationViewStrategy) {
+define(['exports', 'jquery', 'materialize', './select', './side-nav', './validation-view-strategy'], function (exports, _jquery, _materialize, _select, _sideNav, _validationViewStrategy) {
   'use strict';
 
   exports.__esModule = true;

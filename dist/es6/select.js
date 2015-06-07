@@ -1,4 +1,5 @@
-import {customAttribute, inject} from 'aurelia-framework';
+import {customAttribute} from 'aurelia-templating';
+import {inject} from 'aurelia-dependency-injection';
 import $ from 'jquery';
 
 @customAttribute('materialize-select')

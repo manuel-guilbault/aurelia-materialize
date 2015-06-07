@@ -1,4 +1,4 @@
-define(['exports', 'aurelia-framework', 'jquery'], function (exports, _aureliaFramework, _jquery) {
+define(['exports', 'aurelia-templating', 'aurelia-dependency-injection', 'jquery'], function (exports, _aureliaTemplating, _aureliaDependencyInjection, _jquery) {
   'use strict';
 
   exports.__esModule = true;
@@ -26,11 +26,11 @@ define(['exports', 'aurelia-framework', 'jquery'], function (exports, _aureliaFr
       });
     };
 
-    MaterializeSideNav = (0, _aureliaFramework.bindable)({ name: 'closeOnClick', defaultValue: true })(MaterializeSideNav) || MaterializeSideNav;
-    MaterializeSideNav = (0, _aureliaFramework.bindable)('edge')(MaterializeSideNav) || MaterializeSideNav;
-    MaterializeSideNav = (0, _aureliaFramework.bindable)('menuWidth')(MaterializeSideNav) || MaterializeSideNav;
-    MaterializeSideNav = (0, _aureliaFramework.inject)(Element)(MaterializeSideNav) || MaterializeSideNav;
-    MaterializeSideNav = (0, _aureliaFramework.customAttribute)('materialize-side-nav')(MaterializeSideNav) || MaterializeSideNav;
+    MaterializeSideNav = (0, _aureliaTemplating.bindable)({ name: 'closeOnClick', defaultValue: true })(MaterializeSideNav) || MaterializeSideNav;
+    MaterializeSideNav = (0, _aureliaTemplating.bindable)('edge')(MaterializeSideNav) || MaterializeSideNav;
+    MaterializeSideNav = (0, _aureliaTemplating.bindable)('menuWidth')(MaterializeSideNav) || MaterializeSideNav;
+    MaterializeSideNav = (0, _aureliaDependencyInjection.inject)(Element)(MaterializeSideNav) || MaterializeSideNav;
+    MaterializeSideNav = (0, _aureliaTemplating.customAttribute)('materialize-side-nav')(MaterializeSideNav) || MaterializeSideNav;
     return MaterializeSideNav;
   })();
 

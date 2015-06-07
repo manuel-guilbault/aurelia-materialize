@@ -1,3 +1,12 @@
+### 0.2.6 (2015-06-07)
+
+
+#### Bug Fixes
+
+* **all:**
+  * fix dependency to materialize ([c872fa9c](https://github.com/manuel-guilbault/aurelia-materialize/commit/c872fa9cef71a251624c9f9278ff6d2b2d41686c))
+
+
 ### 0.2.5 (2015-06-03)
 
 

@@ -1,4 +1,4 @@
-System.register(['aurelia-framework', 'jquery'], function (_export) {
+System.register(['aurelia-templating', 'aurelia-dependency-injection', 'jquery'], function (_export) {
   'use strict';
 
   var customAttribute, inject, $, MaterializeSelect;
@@ -6,9 +6,10 @@ System.register(['aurelia-framework', 'jquery'], function (_export) {
   function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
   return {
-    setters: [function (_aureliaFramework) {
-      customAttribute = _aureliaFramework.customAttribute;
-      inject = _aureliaFramework.inject;
+    setters: [function (_aureliaTemplating) {
+      customAttribute = _aureliaTemplating.customAttribute;
+    }, function (_aureliaDependencyInjection) {
+      inject = _aureliaDependencyInjection.inject;
     }, function (_jquery) {
       $ = _jquery['default'];
     }],
