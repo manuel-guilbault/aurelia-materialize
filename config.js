@@ -14,9 +14,13 @@ System.config({
     "aurelia-templating": "github:aurelia/templating@0.11.2",
     "css": "github:systemjs/plugin-css@0.1.11",
     "jquery": "github:components/jquery@2.1.4",
-    "materialize": "github:dogfalo/materialize@0.96.1",
+    "materialize": "github:Dogfalo/materialize@0.96.1",
     "traceur": "github:jmcriffey/bower-traceur@0.0.88",
     "traceur-runtime": "github:jmcriffey/bower-traceur-runtime@0.0.88",
+    "github:Dogfalo/materialize@0.96.1": {
+      "css": "github:systemjs/plugin-css@0.1.11",
+      "jquery": "github:components/jquery@2.1.4"
+    },
     "github:aurelia/binding@0.6.1": {
       "aurelia-dependency-injection": "github:aurelia/dependency-injection@0.7.1",
       "aurelia-metadata": "github:aurelia/metadata@0.5.0",
@@ -47,9 +51,6 @@ System.config({
       "aurelia-path": "github:aurelia/path@0.6.1",
       "aurelia-task-queue": "github:aurelia/task-queue@0.4.0",
       "core-js": "npm:core-js@0.9.7"
-    },
-    "github:dogfalo/materialize@0.96.1": {
-      "css": "github:systemjs/plugin-css@0.1.11"
     },
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.3.0"
