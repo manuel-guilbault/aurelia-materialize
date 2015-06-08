@@ -1,3 +1,11 @@
+### 0.2.7 (2015-06-08)
+
+
+#### Bug Fixes
+
+* **dependencies:** fix dependency to Dogfalo/materialize ([ee681e2d](https://github.com/manuel-guilbault/aurelia-materialize/commit/ee681e2d8efc8be8e327e57db48ac0abd6a2e5d2))
+
+
 ### 0.2.6 (2015-06-07)
 
 
