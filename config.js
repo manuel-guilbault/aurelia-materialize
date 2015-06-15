@@ -9,10 +9,10 @@ System.config({
 
 System.config({
   "map": {
-    "aurelia-binding": "github:aurelia/binding@0.6.1",
-    "aurelia-dependency-injection": "github:aurelia/dependency-injection@0.7.1",
+    "aurelia-binding": "github:aurelia/binding@0.7.3",
+    "aurelia-dependency-injection": "github:aurelia/dependency-injection@0.8.1",
     "aurelia-event-aggregator": "github:aurelia/event-aggregator@0.5.0",
-    "aurelia-templating": "github:aurelia/templating@0.11.2",
+    "aurelia-templating": "github:aurelia/templating@0.12.1",
     "css": "github:systemjs/plugin-css@0.1.11",
     "jquery": "github:components/jquery@2.1.4",
     "materialize": "github:Dogfalo/materialize@0.96.1",
@@ -22,39 +22,39 @@ System.config({
       "css": "github:systemjs/plugin-css@0.1.11",
       "jquery": "github:components/jquery@2.1.4"
     },
-    "github:aurelia/binding@0.6.1": {
-      "aurelia-dependency-injection": "github:aurelia/dependency-injection@0.7.1",
-      "aurelia-metadata": "github:aurelia/metadata@0.5.0",
-      "aurelia-task-queue": "github:aurelia/task-queue@0.4.0",
-      "core-js": "npm:core-js@0.9.7"
+    "github:aurelia/binding@0.7.3": {
+      "aurelia-dependency-injection": "github:aurelia/dependency-injection@0.8.1",
+      "aurelia-metadata": "github:aurelia/metadata@0.6.0",
+      "aurelia-task-queue": "github:aurelia/task-queue@0.5.0",
+      "core-js": "npm:core-js@0.9.17"
     },
-    "github:aurelia/dependency-injection@0.7.1": {
-      "aurelia-logging": "github:aurelia/logging@0.4.0",
-      "aurelia-metadata": "github:aurelia/metadata@0.5.0",
-      "core-js": "npm:core-js@0.9.7"
+    "github:aurelia/dependency-injection@0.8.1": {
+      "aurelia-logging": "github:aurelia/logging@0.5.0",
+      "aurelia-metadata": "github:aurelia/metadata@0.6.0",
+      "core-js": "npm:core-js@0.9.17"
     },
     "github:aurelia/event-aggregator@0.5.0": {
       "aurelia-logging": "github:aurelia/logging@0.5.0"
     },
-    "github:aurelia/loader@0.6.0": {
+    "github:aurelia/loader@0.7.0": {
       "aurelia-html-template-element": "github:aurelia/html-template-element@0.2.0",
-      "aurelia-path": "github:aurelia/path@0.6.1",
-      "core-js": "npm:core-js@0.9.7",
-      "webcomponentsjs": "github:webcomponents/webcomponentsjs@0.6.1"
+      "aurelia-path": "github:aurelia/path@0.7.0",
+      "core-js": "npm:core-js@0.9.17",
+      "webcomponentsjs": "github:webcomponents/webcomponentsjs@0.6.3"
     },
-    "github:aurelia/metadata@0.5.0": {
-      "core-js": "npm:core-js@0.9.7"
+    "github:aurelia/metadata@0.6.0": {
+      "core-js": "npm:core-js@0.9.17"
     },
-    "github:aurelia/templating@0.11.2": {
-      "aurelia-binding": "github:aurelia/binding@0.6.1",
-      "aurelia-dependency-injection": "github:aurelia/dependency-injection@0.7.1",
+    "github:aurelia/templating@0.12.1": {
+      "aurelia-binding": "github:aurelia/binding@0.7.3",
+      "aurelia-dependency-injection": "github:aurelia/dependency-injection@0.8.1",
       "aurelia-html-template-element": "github:aurelia/html-template-element@0.2.0",
-      "aurelia-loader": "github:aurelia/loader@0.6.0",
-      "aurelia-logging": "github:aurelia/logging@0.4.0",
-      "aurelia-metadata": "github:aurelia/metadata@0.5.0",
-      "aurelia-path": "github:aurelia/path@0.6.1",
-      "aurelia-task-queue": "github:aurelia/task-queue@0.4.0",
-      "core-js": "npm:core-js@0.9.7"
+      "aurelia-loader": "github:aurelia/loader@0.7.0",
+      "aurelia-logging": "github:aurelia/logging@0.5.0",
+      "aurelia-metadata": "github:aurelia/metadata@0.6.0",
+      "aurelia-path": "github:aurelia/path@0.7.0",
+      "aurelia-task-queue": "github:aurelia/task-queue@0.5.0",
+      "core-js": "npm:core-js@0.9.17"
     },
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.3.0"
@@ -132,8 +132,10 @@ System.config({
       "path": "github:jspm/nodelibs-path@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.1"
     },
-    "npm:core-js@0.9.7": {
-      "process": "github:jspm/nodelibs-process@0.1.1"
+    "npm:core-js@0.9.17": {
+      "fs": "github:jspm/nodelibs-fs@0.1.2",
+      "process": "github:jspm/nodelibs-process@0.1.1",
+      "systemjs-json": "github:systemjs/plugin-json@0.1.0"
     },
     "npm:core-util-is@1.0.1": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0"

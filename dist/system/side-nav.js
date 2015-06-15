@@ -1,7 +1,7 @@
 System.register(['aurelia-templating', 'aurelia-dependency-injection', 'jquery'], function (_export) {
   'use strict';
 
-  var customAttribute, bindable, inject, $, MaterializeSideNav;
+  var customAttribute, bindable, inject, $, MaterialSideNav;
 
   function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
@@ -15,16 +15,16 @@ System.register(['aurelia-templating', 'aurelia-dependency-injection', 'jquery']
       $ = _jquery['default'];
     }],
     execute: function () {
-      MaterializeSideNav = (function () {
-        function MaterializeSideNav(element) {
-          _classCallCheck(this, _MaterializeSideNav);
+      MaterialSideNav = (function () {
+        function MaterialSideNav(element) {
+          _classCallCheck(this, _MaterialSideNav);
 
           this.element = element;
         }
 
-        var _MaterializeSideNav = MaterializeSideNav;
+        var _MaterialSideNav = MaterialSideNav;
 
-        _MaterializeSideNav.prototype.attached = function attached() {
+        _MaterialSideNav.prototype.attached = function attached() {
           $(this.element).sideNav({
             menuWidth: this.menuWidth,
             edge: this.edge,
@@ -32,15 +32,15 @@ System.register(['aurelia-templating', 'aurelia-dependency-injection', 'jquery']
           });
         };
 
-        MaterializeSideNav = bindable({ name: 'closeOnClick', defaultValue: true })(MaterializeSideNav) || MaterializeSideNav;
-        MaterializeSideNav = bindable('edge')(MaterializeSideNav) || MaterializeSideNav;
-        MaterializeSideNav = bindable('menuWidth')(MaterializeSideNav) || MaterializeSideNav;
-        MaterializeSideNav = inject(Element)(MaterializeSideNav) || MaterializeSideNav;
-        MaterializeSideNav = customAttribute('materialize-side-nav')(MaterializeSideNav) || MaterializeSideNav;
-        return MaterializeSideNav;
+        MaterialSideNav = bindable({ name: 'closeOnClick', defaultValue: true })(MaterialSideNav) || MaterialSideNav;
+        MaterialSideNav = bindable('edge')(MaterialSideNav) || MaterialSideNav;
+        MaterialSideNav = bindable('menuWidth')(MaterialSideNav) || MaterialSideNav;
+        MaterialSideNav = inject(Element)(MaterialSideNav) || MaterialSideNav;
+        MaterialSideNav = customAttribute('material-side-nav')(MaterialSideNav) || MaterialSideNav;
+        return MaterialSideNav;
       })();
 
-      _export('MaterializeSideNav', MaterializeSideNav);
+      _export('MaterialSideNav', MaterialSideNav);
     }
   };
 });

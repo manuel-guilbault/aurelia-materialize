@@ -1,13 +1,15 @@
-define(['exports', 'jquery', 'materialize', './select', './side-nav', './validation-view-strategy'], function (exports, _jquery, _materialize, _select, _sideNav, _validationViewStrategy) {
+define(['exports', 'jquery', 'materialize', './select', './side-nav', './toast', './dropdown', './validation-view-strategy'], function (exports, _jquery, _materialize, _select, _sideNav, _toast, _dropdown, _validationViewStrategy) {
   'use strict';
 
   exports.__esModule = true;
   exports.configure = configure;
-  exports.MaterializeSelect = _select.MaterializeSelect;
-  exports.MaterializeSideNav = _sideNav.MaterializeSideNav;
-  exports.MaterializeValidationViewStrategy = _validationViewStrategy.MaterializeValidationViewStrategy;
+  exports.MaterialSelect = _select.MaterialSelect;
+  exports.MaterialSideNav = _sideNav.MaterialSideNav;
+  exports.MaterialToast = _toast.MaterialToast;
+  exports.MaterialDropDown = _dropdown.MaterialDropDown;
+  exports.MaterialValidationViewStrategy = _validationViewStrategy.MaterialValidationViewStrategy;
 
   function configure(aurelia) {
-    aurelia.globalizeResources('./select', './side-nav');
+    aurelia.globalizeResources('./select', './side-nav', './toast', './dropdown');
   }
 });

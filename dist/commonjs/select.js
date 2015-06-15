@@ -14,26 +14,26 @@ var _jquery = require('jquery');
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-var MaterializeSelect = (function () {
-  function MaterializeSelect(element) {
-    _classCallCheck(this, _MaterializeSelect);
+var MaterialSelect = (function () {
+  function MaterialSelect(element) {
+    _classCallCheck(this, _MaterialSelect);
 
     this.element = element;
   }
 
-  var _MaterializeSelect = MaterializeSelect;
+  var _MaterialSelect = MaterialSelect;
 
-  _MaterializeSelect.prototype.attached = function attached() {
+  _MaterialSelect.prototype.attached = function attached() {
     (0, _jquery2['default'])(this.element).material_select();
   };
 
-  _MaterializeSelect.prototype.detached = function detached() {
+  _MaterialSelect.prototype.detached = function detached() {
     (0, _jquery2['default'])(this.element).material_select('destroy');
   };
 
-  MaterializeSelect = (0, _aureliaDependencyInjection.inject)(Element)(MaterializeSelect) || MaterializeSelect;
-  MaterializeSelect = (0, _aureliaTemplating.customAttribute)('materialize-select')(MaterializeSelect) || MaterializeSelect;
-  return MaterializeSelect;
+  MaterialSelect = (0, _aureliaDependencyInjection.inject)(Element)(MaterialSelect) || MaterialSelect;
+  MaterialSelect = (0, _aureliaTemplating.customAttribute)('material-select')(MaterialSelect) || MaterialSelect;
+  return MaterialSelect;
 })();
 
-exports.MaterializeSelect = MaterializeSelect;
+exports.MaterialSelect = MaterialSelect;

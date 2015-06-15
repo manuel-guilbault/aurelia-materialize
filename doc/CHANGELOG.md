@@ -1,3 +1,12 @@
+### 0.2.8 (2015-06-15)
+
+
+#### Features
+
+* **all:**
+  * add dropdown & toast ([c67b7df7](https://github.com/manuel-guilbault/aurelia-materialize/commit/c67b7df742e09869c7cacc1ac73ea28aaf2b2614))
+
+
 ### 0.2.7 (2015-06-08)
 
 

@@ -1,13 +1,17 @@
 import 'jquery';
 import 'materialize';
 
-export {MaterializeSelect} from './select';
-export {MaterializeSideNav} from './side-nav';
-export {MaterializeValidationViewStrategy} from './validation-view-strategy';
+export {MaterialSelect} from './select';
+export {MaterialSideNav} from './side-nav';
+export {MaterialToast} from './toast';
+export {MaterialDropDown} from './dropdown';
+export {MaterialValidationViewStrategy} from './validation-view-strategy';
 
 export function configure(aurelia) {
   aurelia.globalizeResources(
     './select',
-    './side-nav'
+    './side-nav',
+    './toast',
+    './dropdown'
   );
 }

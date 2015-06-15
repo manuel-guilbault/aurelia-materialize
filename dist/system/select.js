@@ -1,7 +1,7 @@
 System.register(['aurelia-templating', 'aurelia-dependency-injection', 'jquery'], function (_export) {
   'use strict';
 
-  var customAttribute, inject, $, MaterializeSelect;
+  var customAttribute, inject, $, MaterialSelect;
 
   function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
@@ -14,29 +14,29 @@ System.register(['aurelia-templating', 'aurelia-dependency-injection', 'jquery']
       $ = _jquery['default'];
     }],
     execute: function () {
-      MaterializeSelect = (function () {
-        function MaterializeSelect(element) {
-          _classCallCheck(this, _MaterializeSelect);
+      MaterialSelect = (function () {
+        function MaterialSelect(element) {
+          _classCallCheck(this, _MaterialSelect);
 
           this.element = element;
         }
 
-        var _MaterializeSelect = MaterializeSelect;
+        var _MaterialSelect = MaterialSelect;
 
-        _MaterializeSelect.prototype.attached = function attached() {
+        _MaterialSelect.prototype.attached = function attached() {
           $(this.element).material_select();
         };
 
-        _MaterializeSelect.prototype.detached = function detached() {
+        _MaterialSelect.prototype.detached = function detached() {
           $(this.element).material_select('destroy');
         };
 
-        MaterializeSelect = inject(Element)(MaterializeSelect) || MaterializeSelect;
-        MaterializeSelect = customAttribute('materialize-select')(MaterializeSelect) || MaterializeSelect;
-        return MaterializeSelect;
+        MaterialSelect = inject(Element)(MaterialSelect) || MaterialSelect;
+        MaterialSelect = customAttribute('material-select')(MaterialSelect) || MaterialSelect;
+        return MaterialSelect;
       })();
 
-      _export('MaterializeSelect', MaterializeSelect);
+      _export('MaterialSelect', MaterialSelect);
     }
   };
 });

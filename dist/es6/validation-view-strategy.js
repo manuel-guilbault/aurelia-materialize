@@ -1,4 +1,4 @@
-export class MaterializeValidationViewStrategy {
+export class MaterialValidationViewStrategy {
 
   constructor() {
     this.bindingPathAttributes = ['validate', 'value.bind', 'value.two-way'];

@@ -14,16 +14,16 @@ var _jquery = require('jquery');
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-var MaterializeSideNav = (function () {
-  function MaterializeSideNav(element) {
-    _classCallCheck(this, _MaterializeSideNav);
+var MaterialSideNav = (function () {
+  function MaterialSideNav(element) {
+    _classCallCheck(this, _MaterialSideNav);
 
     this.element = element;
   }
 
-  var _MaterializeSideNav = MaterializeSideNav;
+  var _MaterialSideNav = MaterialSideNav;
 
-  _MaterializeSideNav.prototype.attached = function attached() {
+  _MaterialSideNav.prototype.attached = function attached() {
     (0, _jquery2['default'])(this.element).sideNav({
       menuWidth: this.menuWidth,
       edge: this.edge,
@@ -31,12 +31,12 @@ var MaterializeSideNav = (function () {
     });
   };
 
-  MaterializeSideNav = (0, _aureliaTemplating.bindable)({ name: 'closeOnClick', defaultValue: true })(MaterializeSideNav) || MaterializeSideNav;
-  MaterializeSideNav = (0, _aureliaTemplating.bindable)('edge')(MaterializeSideNav) || MaterializeSideNav;
-  MaterializeSideNav = (0, _aureliaTemplating.bindable)('menuWidth')(MaterializeSideNav) || MaterializeSideNav;
-  MaterializeSideNav = (0, _aureliaDependencyInjection.inject)(Element)(MaterializeSideNav) || MaterializeSideNav;
-  MaterializeSideNav = (0, _aureliaTemplating.customAttribute)('materialize-side-nav')(MaterializeSideNav) || MaterializeSideNav;
-  return MaterializeSideNav;
+  MaterialSideNav = (0, _aureliaTemplating.bindable)({ name: 'closeOnClick', defaultValue: true })(MaterialSideNav) || MaterialSideNav;
+  MaterialSideNav = (0, _aureliaTemplating.bindable)('edge')(MaterialSideNav) || MaterialSideNav;
+  MaterialSideNav = (0, _aureliaTemplating.bindable)('menuWidth')(MaterialSideNav) || MaterialSideNav;
+  MaterialSideNav = (0, _aureliaDependencyInjection.inject)(Element)(MaterialSideNav) || MaterialSideNav;
+  MaterialSideNav = (0, _aureliaTemplating.customAttribute)('material-side-nav')(MaterialSideNav) || MaterialSideNav;
+  return MaterialSideNav;
 })();
 
-exports.MaterializeSideNav = MaterializeSideNav;
+exports.MaterialSideNav = MaterialSideNav;

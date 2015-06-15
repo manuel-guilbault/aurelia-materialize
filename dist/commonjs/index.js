@@ -9,16 +9,24 @@ require('materialize');
 
 var _select = require('./select');
 
-exports.MaterializeSelect = _select.MaterializeSelect;
+exports.MaterialSelect = _select.MaterialSelect;
 
 var _sideNav = require('./side-nav');
 
-exports.MaterializeSideNav = _sideNav.MaterializeSideNav;
+exports.MaterialSideNav = _sideNav.MaterialSideNav;
+
+var _toast = require('./toast');
+
+exports.MaterialToast = _toast.MaterialToast;
+
+var _dropdown = require('./dropdown');
+
+exports.MaterialDropDown = _dropdown.MaterialDropDown;
 
 var _validationViewStrategy = require('./validation-view-strategy');
 
-exports.MaterializeValidationViewStrategy = _validationViewStrategy.MaterializeValidationViewStrategy;
+exports.MaterialValidationViewStrategy = _validationViewStrategy.MaterialValidationViewStrategy;
 
 function configure(aurelia) {
-  aurelia.globalizeResources('./select', './side-nav');
+  aurelia.globalizeResources('./select', './side-nav', './toast', './dropdown');
 }

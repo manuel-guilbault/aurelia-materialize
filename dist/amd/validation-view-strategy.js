@@ -5,14 +5,14 @@ define(['exports'], function (exports) {
 
   function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
-  var MaterializeValidationViewStrategy = (function () {
-    function MaterializeValidationViewStrategy() {
-      _classCallCheck(this, MaterializeValidationViewStrategy);
+  var MaterialValidationViewStrategy = (function () {
+    function MaterialValidationViewStrategy() {
+      _classCallCheck(this, MaterialValidationViewStrategy);
 
       this.bindingPathAttributes = ['validate', 'value.bind', 'value.two-way'];
     }
 
-    MaterializeValidationViewStrategy.prototype.getValidationProperty = function getValidationProperty(validation, element) {
+    MaterialValidationViewStrategy.prototype.getValidationProperty = function getValidationProperty(validation, element) {
       var atts = element.attributes;
       for (var i = 0; i < this.bindingPathAttributes.length; i++) {
         var attributeName = this.bindingPathAttributes[i];
@@ -31,15 +31,15 @@ define(['exports'], function (exports) {
       return null;
     };
 
-    MaterializeValidationViewStrategy.prototype.prepareElement = function prepareElement(validationProperty, element) {
+    MaterialValidationViewStrategy.prototype.prepareElement = function prepareElement(validationProperty, element) {
       this.appendUIVisuals(null, element);
     };
 
-    MaterializeValidationViewStrategy.prototype.updateElement = function updateElement(validationProperty, element) {
+    MaterialValidationViewStrategy.prototype.updateElement = function updateElement(validationProperty, element) {
       this.appendUIVisuals(validationProperty, element);
     };
 
-    MaterializeValidationViewStrategy.prototype.appendUIVisuals = function appendUIVisuals(validationProperty, currentElement) {
+    MaterialValidationViewStrategy.prototype.appendUIVisuals = function appendUIVisuals(validationProperty, currentElement) {
       if (validationProperty && validationProperty.isDirty) {
         if (validationProperty.isValid) {
           currentElement.classList.remove('invalid');
@@ -59,8 +59,8 @@ define(['exports'], function (exports) {
       }
     };
 
-    return MaterializeValidationViewStrategy;
+    return MaterialValidationViewStrategy;
   })();
 
-  exports.MaterializeValidationViewStrategy = MaterializeValidationViewStrategy;
+  exports.MaterialValidationViewStrategy = MaterialValidationViewStrategy;
 });
