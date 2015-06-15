@@ -2,12 +2,12 @@
 import {inject} from 'aurelia-dependency-injection';
 import $ from 'jquery';
 
-@customAttribute('materialize-side-nav')
+@customAttribute('material-side-nav')
 @inject(Element)
 @bindable('menuWidth')
 @bindable('edge')
 @bindable({ name: 'closeOnClick', defaultValue: true })
-export class MaterializeSideNav {
+export class MaterialSideNav {
   constructor(element) {
     this.element = element;
   }

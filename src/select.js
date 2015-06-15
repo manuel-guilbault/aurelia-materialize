@@ -2,9 +2,9 @@
 import {inject} from 'aurelia-dependency-injection';
 import $ from 'jquery';
 
-@customAttribute('materialize-select')
+@customAttribute('material-select')
 @inject(Element)
-export class MaterializeSelect {
+export class MaterialSelect {
   constructor(element) {
     this.element = element;
   }

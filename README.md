@@ -8,18 +8,18 @@ A plugin for [Aurelia](http://aurelia.io) that integrate JS features from [Mater
 
 ###Select
 
-Put the ```materialize-select``` attribute on a ```select``` element to
+Put the ```material-select``` attribute on a ```select``` element to
 style the select as a materialize select:
 
 ``` html
-<select value.bind="selectedValue" materialize-select>
+<select value.bind="selectedValue" material-select>
   <option repeat.for="value of values" value.bind="value">${value}</option>
 </select>
 ```
 
 ###Side Nav
 
-Put the ```materialize-side-nav``` attribute on an anchor acting as a button collapse
+Put the ```material-side-nav``` attribute on an anchor acting as a button collapse
 to activate the side nav widget:
 
 ``` html
@@ -27,7 +27,7 @@ to activate the side nav widget:
     <li><a href="#!">First Sidebar Link</a></li>
     <li><a href="#!">Second Sidebar Link</a></li>
   </ul>
-  <a href="#" data-activates="slide-out" class="button-collapse" materialize-side-nav>
+  <a href="#" data-activates="slide-out" class="button-collapse" material-side-nav>
     <i class="mdi-navigation-menu"></i>
   </a>
 ```
@@ -35,7 +35,7 @@ to activate the side nav widget:
 You can specify options for the side nav (check the [documentation](http://materializecss.com/side-nav.html)):
 
 ``` html
-  <a href="#" data-activates="slide-out" class="button-collapse" materialize-side-nav="menu-width: 400; edge: 'right';">
+  <a href="#" data-activates="slide-out" class="button-collapse" material-side-nav="menu-width: 400; edge: 'right';">
     <i class="mdi-navigation-menu"></i>
   </a>
 ```
@@ -43,24 +43,95 @@ You can specify options for the side nav (check the [documentation](http://mater
 Since we are in a SPA context, the ```closeOnClick``` option is ```true``` by default, but can be changed as the other options:
 
 ``` html
-  <a href="#" data-activates="slide-out" class="button-collapse" materialize-side-nav="menu-width: 400; edge: 'right'; close-on-click: false;">
+  <a href="#" data-activates="slide-out" class="button-collapse" material-side-nav="menu-width: 400; edge: 'right'; close-on-click: false;">
     <i class="mdi-navigation-menu"></i>
   </a>
 ```
+
+###Toast
+
+Add a ```<material-toast>``` element to declare a toast that can be displayed by your application.
+Then bind the ```<material-toast>``` element to an event (see the [documentation](http://aurelia.io/docs.html#the-event-aggregator)),
+and the toast will be displayed when the appropriate event is published. The content of the ```<material-toast>``` will
+be compiled and bound on the fly to the event payload.
+
+In the following example, the view model's ```failLogin``` method will publish an
+event with a payload containing the error message and, in the view, a ```material-toast```
+will subscribe to this event and show itself when the event is published:
+
+``` javascript
+import {inject} from 'aurelia-framework';
+import {EventAggregator} from 'aurelia-event-aggregator';
+
+export class ViewModel {
+  constructor(eventAggregator) {
+    this.eventAggregator = eventAggregator;
+  }
+
+  failLogin(reason) {
+    eventAggregator.publish('login:failed', { message: reason });
+  }
+}
+```
+
+``` html
+<material-toast event="login:failed" duration="4000" class="rounded">
+  <p><i class="mdi-alert-error"></i> ${message}</p>
+</material-toast>
+```
+
+As you can see in the above example, you can specify the duration and the CSS class
+for the toast.
+
+Additionally, you can pass to the ```on-closed``` property (using the
+```.call``` [command](http://aurelia.io/docs.html#event-modes)) a method that will
+be executed when the toast has disappeared.
+
+###Dropdown
+
+Add a ```material-dropdown``` attribute on an anchor acting as a dropdown button
+to activate the dropdown widget:
+
+``` javascript
+export class ViewModel {
+  action = ['Edit', 'Delete', 'Export'];
+  
+  perform(action) {
+    // do something based on provided action type
+  }
+}
+```
+
+``` html
+<a class="dropdown-button btn" href="#" data-activates="platforms" material-dropdown>Actions</a>
+<ul id="platforms" class="dropdown-content">
+  <li repeat.for="action of actions">
+    <a href="#" click.delegate="$parent.perform(action)">${action}</a>
+  </li>
+</ul>
+```
+
+In the example above, a dropdown button will display a list of actions. A click on
+one of those actions will call the ```perform``` method on the view model, with the
+selected action passed as an argument.
+
+You can pass all the options supported by the original widget (check the [documentation](http://materializecss.com/dropdown.html))
+as properties for the attribute: ```in-duration```, ```out-duration```, ```constrain-width```,
+```hover```, ```gutter``` and ```below-origin```.
 
 ## Integration with aurelia-validation
 
 You can easily integrate aurelia-materialize with [aurelia-validation](https://github.com/aurelia/validation). In your application's ```configure``` method, first load aurelia-materialize, then load aurelia-validation and provide a configuration callback that will tell to the validation plugin to use aurelia-materialize's view strategy to provide visual feedback.
 
 ``` javascript
-import {MaterializeValidationViewStrategy} from 'aurelia-materialize';
+import {MaterialValidationViewStrategy} from 'aurelia-materialize';
 
 export function configure(aurelia) {
   aurelia.use
     .standardConfiguration()
     .developmentLogging()
     .plugin('aurelia-materialize')
-    .plugin('aurelia-validation', config => { config.useViewStrategy(new MaterializeValidationViewStrategy()); });
+    .plugin('aurelia-validation', config => { config.useViewStrategy(new MaterialValidationViewStrategy()); });
 
   aurelia.start().then(a => a.setRoot());
 }

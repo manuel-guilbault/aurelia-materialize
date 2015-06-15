@@ -1,5 +1,5 @@
 ﻿import $ from 'jquery';
-import {MaterializeSideNav} from '../src/side-nav';
+import {MaterialSideNav} from '../src/side-nav';
 
 describe('side-nav', () => {
 
@@ -8,7 +8,7 @@ describe('side-nav', () => {
   beforeEach(() => {
     spyOn($.fn, 'sideNav');
     anchor = document.createElement('a');
-    sideNav = new MaterializeSideNav(anchor);
+    sideNav = new MaterialSideNav(anchor);
   });
 
   function expectSideNavCallWithOptions(expectedOptions) {
