@@ -1,3 +1,11 @@
+### 0.2.9 (2015-06-17)
+
+
+#### Features
+
+* **collapsible:** add the collapsible widget ([c48c18c8](https://github.com/manuel-guilbault/aurelia-materialize/commit/c48c18c804ae0c1510002f83130e8f8ecfba5172))
+
+
 ### 0.2.8 (2015-06-15)
 
 

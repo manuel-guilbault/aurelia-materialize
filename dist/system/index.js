@@ -1,10 +1,10 @@
-System.register(['jquery', 'materialize', './select', './side-nav', './toast', './dropdown', './validation-view-strategy'], function (_export) {
+System.register(['jquery', 'materialize', './select', './side-nav', './toast', './dropdown', './collapsible', './validation-view-strategy'], function (_export) {
   'use strict';
 
   _export('configure', configure);
 
   function configure(aurelia) {
-    aurelia.globalizeResources('./select', './side-nav', './toast', './dropdown');
+    aurelia.globalizeResources('./select', './side-nav', './toast', './dropdown', './collapsible');
   }
 
   return {
@@ -16,6 +16,8 @@ System.register(['jquery', 'materialize', './select', './side-nav', './toast', '
       _export('MaterialToast', _toast.MaterialToast);
     }, function (_dropdown) {
       _export('MaterialDropDown', _dropdown.MaterialDropDown);
+    }, function (_collapsible) {
+      _export('MaterialCollapsible', _collapsible.MaterialCollapsible);
     }, function (_validationViewStrategy) {
       _export('MaterialValidationViewStrategy', _validationViewStrategy.MaterialValidationViewStrategy);
     }],
