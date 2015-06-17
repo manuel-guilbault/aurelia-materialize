@@ -6,6 +6,28 @@ A plugin for [Aurelia](http://aurelia.io) that integrate JS features from [Mater
 
 ##Documentation
 
+###Collapsible
+
+Put the ```material-collapsible``` attribute on a ```ul``` element acting as the
+container of a collapsible list structure to enable the ```collapsible``` widget:
+
+``` html
+<ul class="collapsible" material-collapsible="accordion: true">
+  <li>
+    <div class="collapsible-header"><i class="mdi-image-filter-drama"></i>First</div>
+    <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+  </li>
+  <li>
+    <div class="collapsible-header"><i class="mdi-maps-place"></i>Second</div>
+    <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+  </li>
+</ul>
+```
+
+As shown in the example above, you can specify the ```accordion``` option
+(check the [documentation](http://materializecss.com/collapsible.html)).
+If omitted, its default value is ```false```.
+
 ###Select
 
 Put the ```material-select``` attribute on a ```select``` element to
@@ -47,7 +69,10 @@ Since we are in a SPA context, the ```closeOnClick``` option is ```true``` by de
     <i class="mdi-navigation-menu"></i>
   </a>
 ```
-Dropdown HTML Structure
+
+Here's an example of the HTML structure to define a submenu. It uses the ```material-collapsible```
+attribute in side-nav mode, and the ```material-dropdown``` attribute in top menu mode.
+
 ``` html
 <ul id="slide-out" class="side-nav">
     <li><a href="#!">First Sidebar Link</a></li>
@@ -60,8 +85,6 @@ Dropdown HTML Structure
             <ul>
               <li><a href="#!">First</a></li>
               <li><a href="#!">Second</a></li>
-              <li><a href="#!">Third</a></li>
-              <li><a href="#!">Fourth</a></li>
             </ul>
           </div>
         </li>
@@ -72,17 +95,16 @@ Dropdown HTML Structure
     <li><a href="#!">First Sidebar Link</a></li>
     <li><a href="#!">Second Sidebar Link</a></li>
     <li>
-	<a class="dropdown-button" href="#!" data-activates="dropdown1" material-dropdown>Dropdown<i class="mdi-navigation-arrow-drop-down right"></i></a>
-	 <ul id='dropdown1' class='dropdown-content'>
-      <li><a href="#!">First</a></li>
-      <li><a href="#!">Second</a></li>
-      <li><a href="#!">Third</a></li>
-      <li><a href="#!">Fourth</a></li>
-    </ul>
-	</li>
+	    <a class="dropdown-button" href="#!" data-activates="dropdown1" material-dropdown>Dropdown<i class="mdi-navigation-arrow-drop-down right"></i></a>
+	    <ul id='dropdown1' class='dropdown-content'>
+        <li><a href="#!">First</a></li>
+        <li><a href="#!">Second</a></li>
+      </ul>
+	  </li>
   </ul>
   <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
 ```
+
 ###Toast
 
 Add a ```<material-toast>``` element to declare a toast that can be displayed by your application.
