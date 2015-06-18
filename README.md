@@ -70,8 +70,8 @@ Since we are in a SPA context, the ```closeOnClick``` option is ```true``` by de
   </a>
 ```
 
-Here's an example of the HTML structure to define a submenu. It uses the ```material-collapsible```
-attribute in side-nav mode, and the ```material-dropdown``` attribute in top menu mode.
+Here's an example of the HTML structure to define a submenu inside a menu. The menu is always visible at the top on big screens, and falls back as a sliding out left menu on smaller screens.. To make the submenu work, it uses the ```material-collapsible```
+attribute in slide out mode and the ```material-dropdown``` attribute in top menu mode.
 
 ``` html
 <ul id="slide-out" class="side-nav">
@@ -102,7 +102,7 @@ attribute in side-nav mode, and the ```material-dropdown``` attribute in top men
       </ul>
 	  </li>
   </ul>
-  <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+  <a href="#" data-activates="slide-out" class="button-collapse" material-side-nav><i class="mdi-navigation-menu"></i></a>
 ```
 
 ###Toast
