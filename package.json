@@ -32,7 +32,7 @@
       "aurelia-templating": "github:aurelia/templating@^0.12.1",
       "css": "github:systemjs/plugin-css@^0.1.9",
       "jquery": "github:components/jquery@^2.1.4",
-      "materialize": "github:Dogfalo/materialize@^0.96.1"
+      "materialize": "github:Dogfalo/materialize@^0.97.0"
     },
     "devDependencies": {
       "traceur": "github:jmcriffey/bower-traceur@0.0.88",
