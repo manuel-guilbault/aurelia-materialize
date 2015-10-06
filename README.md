@@ -1,3 +1,5 @@
+The official repository has been moved [here](https://github.com/aurelia-widgets/aurelia-materialize).
+
 # aurelia-materialize
 
 A plugin for [Aurelia](http://aurelia.io) that integrate JS features from [Materialize CSS](http://materializecss.com/).
