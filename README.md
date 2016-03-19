@@ -1,4 +1,4 @@
-**_The official repository has been moved [here](https://github.com/aurelia-ui-toolkits/aurelia-materialize-plugin)._**
+**_The official repository has been moved [here](https://github.com/aurelia-ui-toolkits/aurelia-materialize-bridge)._**
 
 # aurelia-materialize
 
